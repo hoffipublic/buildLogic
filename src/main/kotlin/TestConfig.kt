@@ -1,33 +1,28 @@
 import org.gradle.api.tasks.testing.AbstractTestTask
-import org.gradle.api.tasks.testing.Test
 import org.gradle.api.tasks.testing.TestDescriptor
 import org.gradle.api.tasks.testing.TestResult
 import org.gradle.kotlin.dsl.KotlinClosure1
 import org.gradle.kotlin.dsl.KotlinClosure2
 
-/** use with:
+/** applied with kotlinXxxBuildLogic convention plugins
+ * or use with:
  * tasks {
  *     withType<Test> {
  *         buildLogicJvmTestConfig()
  *     }
  * }
  */
-fun Test.buildLogicJvmTestConfig() {
-    // classpath += developmentOnly
-    useJUnitPlatform {
-        //includeEngines("junit-jupiter", "spek2")
-        // includeTags "fast"
-        // excludeTags "app", "integration", "messaging", "slow", "trivial"
-    }
+fun org.gradle.api.tasks.testing.Test.buildLogicJvmTestConfig() {
+    // since gradle 8.x JunitPlatform is the default and must not be configured explicitly anymore
+    //useJUnitPlatform {
+    //    //includeEngines("junit-jupiter", "spek2")
+    //    // includeTags "fast"
+    //    // excludeTags "app", "integration", "messaging", "slow", "trivial"
+    //}
     failFast = false
-    buildSrcCommonTestConfig("JVM")
+    buildLogicCommonTestConfig("JVM")
 }
-////tasks { withType(org.jetbrains.kotlin.gradle.targets.native.tasks.KotlinNativeTest::class) { buildSrcNativeTestConfig() } }
-//fun org.jetbrains.kotlin.gradle.targets.native.tasks.KotlinNativeTest.buildSrcNativeTestConfig() {
-//    buildSrcCommonTestConfig("NATIVE")
-//}
-
-fun AbstractTestTask.buildSrcCommonTestConfig(targetPlatform: String) {
+fun AbstractTestTask.buildLogicCommonTestConfig(targetPlatform: String) {
     ignoreFailures = false
     testLogging {
         showStandardStreams = true

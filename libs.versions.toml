@@ -16,7 +16,7 @@ compose = "1.5.0-dev1060"
 exposed = "0.41.1"
 gradle-versions-catalogUpdate = "0.8.0"
 gradle-versions-filter = "0.1.16"
-gradle-versions-plugin = "0.46.0"
+gradle-versions-plugin = "0.47.0"
 h2 = "2.1.214"
 hamcrest = "2.2"
 # global
@@ -25,12 +25,13 @@ jsoup = "1.16.1"
 junit-jupiter = "5.9.3"
 kermit = "2.0.0-RC4"
 kodein = "7.20.1"
-koin = "3.4.1"
+koin = "3.4.2"
+kointest = "3.4.1"
 koodies = "1.9.7"
 kotest = "5.6.2"
 kotest-extensions-koin = "1.1.0"
 # global
-kotlin = "1.8.21"
+kotlin = "1.8.22"
 kotlin-logging = "3.0.5"
 kotlinpoet = "1.14.2"
 kotlinx-coroutines = "1.7.1"
@@ -40,7 +41,7 @@ kotlinx-serialization-kaml = "0.54.0"
 kotlinx-serialization-ktoml = "0.5.0"
 kotlinx-serialization-yamlkt = "0.13.0"
 ktor = "2.3.1"
-logback = "1.4.7"
+logback = "1.4.8"
 # plugin
 micronaut = "3.7.9"
 moshi = "1.15.0"
@@ -80,6 +81,7 @@ junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", vers
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 kodein = { module = "org.kodein.di:kodein-di", version.ref = "kodein" }
 koin = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+kointest = { module = "io.insert-koin:koin-test", version.ref = "kointest" }
 koodies = { module = "com.bkahlert.koodies:koodies", version.ref = "koodies" }
 kotest-extensions-koin = { module = "io.kotest.extensions:kotest-extensions-koin", version.ref = "kotest-extensions-koin" }
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }

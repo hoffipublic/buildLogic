@@ -1,5 +1,5 @@
 plugins {
-    id("kotlinCommonBuildLogic")
+    id("kotlinCommonBuildLogic") // local in ROOT/buildLogic/src/main/kotlin/kotlinCommonBuildLogic.gradle.kts
     kotlin("jvm")
     // add gradle plugins here that "automagically should be applied
     // and then in YOUR build.gradle.kts reference:  plugins { id(<thisFileName>) }
@@ -11,6 +11,9 @@ plugins {
 
 kotlin {
     jvmToolchain(BuildLogicGlobal.jdkVersion)
+    tasks.withType<Test>().configureEach {
+        buildLogicJvmTestConfig()
+    }
 }
 afterEvaluate {
     tasks {
