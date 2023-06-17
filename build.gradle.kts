@@ -12,12 +12,6 @@ plugins {
     id("se.ascp.gradle.gradle-versions-filter") version libs.versions.gradle.versions.filter
 }
 
-repositories {
-    gradlePluginPortal()
-    mavenCentral()
-    google()
-}
-
 dependencies {
     // val libs and its values defined in ROOT/buildLogic/src/main/kotlin/VersionCatalogsExtensions.kt
     implementation(libs.kotlin.gradlePlugin)
