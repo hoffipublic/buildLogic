@@ -34,5 +34,6 @@ afterEvaluate {
 //}
 
 dependencies {
+    // versions file: ROOT/buildLogic/libs.versions.toml
 
 }
