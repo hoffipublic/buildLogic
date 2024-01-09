@@ -18,7 +18,7 @@ internal val VersionCatalog.jdkVersion: String
 internal val VersionCatalog.kotlinVersion: String
     get() = findVersionOrThrow("kotlin")
 internal val VersionCatalog.composeVersion: String
-    get() = findVersionOrThrow("compose")
+    get() = findVersionOrThrow("kotlin-compose")
 
 internal val VersionCatalog.versionsPlugin: String
     get() = findVersionOrThrow("gradle-versions-plugin")
